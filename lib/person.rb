@@ -24,18 +24,18 @@ class Person
     if points > 10
       @hygiene = 10
     elsif points < 0
-      @hygiene = 0
+      @hygiene= 0
     else
       @hygiene = points
     end
   end
 
   def clean?
-    @hygiene > 7 ? true : false
+    self.hygiene > 7 ? true : false
   end
 
   def happy?
-    @happiness > 7 ? true : false
+    self.happiness > 7 ? true : false
   end
 
   def get_paid(salary)
@@ -57,7 +57,7 @@ class Person
   def call_friend(friend)
     self.happiness=(@happiness += 3)
     friend.happiness += 3
-    "Hi #{friend.name}! It's #{@name}. How are you?"
+    "Hi #{friend.name}! It's #{self.name}. How are you?"
   end
 
   def start_conversation(person, topic)
